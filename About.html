@@ -16,8 +16,8 @@
         }
         .navbar {
             background: rgba(0,0,0,0.6);
-            padding: 20px;
             text-align: center;
+            padding: 20px;
             backdrop-filter: blur(8px);
         }
         .navbar a {
@@ -27,25 +27,50 @@
             border-radius: 20px;
             color: white;
             text-decoration: none;
+            font-size: 18px;
             transition: 0.3s;
         }
         .navbar a:hover {
             background: crimson;
         }
 
-        .container {
+        .box {
             background: rgba(255,255,255,0.95);
-            color: #333;
-            margin: 60px auto;
-            width: 80%;
+            width: 70%;
+            color: #222;
+            margin: 70px auto;
             padding: 40px;
             border-radius: 15px;
+            font-size: 18px;
             line-height: 1.8;
         }
+
         h1 {
-            text-align: center;
             color: crimson;
+            font-size: 34px;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 6px;
+            border-bottom: 4px solid crimson;
+            width: fit-content;
+            margin: auto;
+        }
+
+        .pbw-box {
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 6px solid crimson;
+        }
+
+        .pbw-title {
+            font-size: 20px;
             font-weight: 600;
+            color: crimson;
+            text-transform: uppercase;
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -57,18 +82,24 @@
         <a href="pendidikan.html">Riwayat Pendidikan</a>
     </div>
 
-    <div class="container">
-        <h1>About</h1>
+    <div class="box">
+        <h1>About Me</h1>
+
         <p>
-            Saya seorang mahasiswa Sistem Informasi, saya melihat dunia sebagai jaringan data 
-            yang saling terhubung dan menunggu untuk dioptimalkan. Perjalanan akademis saya.
+            Saya adalah mahasiswa Sistem Informasi yang tertarik pada teknologi, desain, dan dunia digital.
+            Bagi saya, teknologi bukan hanya alat, tetapi jembatan untuk menciptakan solusi.
         </p>
+
         <p>
-            Namun di luar layar kampus dan kode program, ada dunia nyata yang memanggil untuk dijelajahi.
+            Walaupun saya belajar tentang jaringan, database, dan pemrograman, namun kehidupan nyata mengajarkan
+            komunikasi, logika, dan pengalaman yang tidak pernah diajarkan di kelas.
         </p>
-        <p>
-            Dua dunia yang terlihat berbeda ini saling melengkapi dalam hidup saya.
-        </p>
+
+        <div class="pbw-box">
+            <div class="pbw-title">Pemrograman Berbasis Web</div>
+            PBW membantu saya memahami bagaimana website dibangun, dari HTML, CSS, hingga logika program.
+            Dengan PBW, kita menciptakan tampilan, interaksi, dan sistem yang bisa digunakan oleh banyak orang.
+        </div>
     </div>
 
 </body>
