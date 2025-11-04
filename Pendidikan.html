@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Pendidikan</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(180deg, crimson, #000);
+            color: white;
+        }
+
+        .navbar {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+        .navbar a {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background: crimson;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 80%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(90deg, #570000, #1a0000);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            background: crimson;
+            color: white;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+        }
+
+        tr:nth-child(even) td {
+            background: rgba(255,255,255,0.15);
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.3);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pendidikan.html">Riwayat Pendidikan</a>
+    </div>
+
+    <h1>Riwayat Pendidikan</h1>
+
+    <table>
+        <tr>
+            <th>Tingkat</th>
+            <th>Nama Sekolah</th>
+            <th>Tahun Lulus</th>
+        </tr>
+        <tr>
+            <td>SD</td>
+            <td>SD 122 Cijawura</td>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <td>SMP</td>
+            <td>SMP 48 Bandung</td>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <td>SMA</td>
+            <td>SMA 25 Bandung</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>Perguruan Tinggi</td>
+            <td>Universitas Widyatama</td>
+            <td>Ongoing</td>
+        </tr>
+    </table>
+
+</body>
+</html>
