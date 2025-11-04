@@ -1,95 +1,257 @@
-body {
+/* Reset dan font */
+body, html {
     margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(180deg, crimson, #000);
-    color: white;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* Latar belakang default hitam */
+    background-color: #0a0a0a;
 }
 
+/* Navbar */
 .navbar {
-    background: rgba(0,0,0,0.65);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10,10,10,0.8); /* Hitam sedikit transparan */
     text-align: center;
-    padding: 17px;
-    backdrop-filter: blur(6px);
+    padding: 15px 0;
+    backdrop-filter: blur(10px); /* Efek blur yang lebih kuat */
+    z-index: 100;
+    border-bottom: 2px solid crimson; /* Garis pemisah crimson */
 }
 .navbar a {
-    background: rgba(255,255,255,0.15);
-    padding: 10px 22px;
-    margin: 0 10px;
-    border-radius: 18px;
-    color: white;
+    color: #f0f0f0; /* Putih keabuan */
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
-.navbar a:hover {
+.navbar a:hover, .navbar a.active {
     background: crimson;
-}
-.active {
-    border-bottom: 3px solid;
-    border-image: linear-gradient(to right, white, crimson, white) 1;
-}
-
-.box {
-    background: rgba(255,255,255,0.15);
-    width: 70%;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.2);
     color: white;
-    margin: 90px auto;
-    padding: 45px;
-    text-align: center;
-    border-radius: 18px;
-    font-size: 22px;
-    line-height: 1.8;
-}
-.title-home {
-    display: inline-block;
-    font-size: 42px;
-    font-weight: 700;
-    background: linear-gradient(to right, crimson, black);
-    -webkit-background-clip: text;
-    color: transparent;
-    padding-bottom: 7px;
-    border-bottom: 4px solid crimson;
+    border-color: crimson;
+    box-shadow: 0 0 15px crimson; /* Efek glow crimson */
 }
 
-.nama-user {
-    margin-top: 15px;
-    display: inline-block;
-    font-size: 26px;
-    font-weight: 700;
-    padding: 7px 15px;
-    border-radius: 10px;
-    background: linear-gradient(to right, crimson, black);
-    border: 2px solid crimson;
+/* Section Umum */
+section {
+    padding-top: 60px; /* Jarak atas untuk mengatasi fixed navbar */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.container {
-    background: rgba(255,255,255,0.95);
-    color: #333;
-    margin: 70px auto;
-    width: 80%;
-    padding: 35px;
+/* Home Section */
+#home {
+    background: linear-gradient(180deg, #1a0000 0%, #000000 100%); /* Gradien gelap ke hitam */
+}
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 20px 50px 20px;
+    gap: 40px;
+}
+
+.home-left {
+    flex: 1 1 400px;
+    color: white;
+}
+
+.home-right {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.home-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #aaa;
+}
+
+/* Balok nama */
+.nama-box {
+    background: #222;
+    padding: 25px 35px;
     border-radius: 15px;
-    line-height: 1.7;
+    border: 1px solid crimson;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.4); /* Glow effect */
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.nama-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(220, 20, 60, 0.6);
+}
+.nama-text {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: crimson;
     text-align: center;
 }
+
+/* Home illustration */
+.illustration img {
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(220, 20, 60, 0.7); /* Efek glow yang dramatis */
+    border: 5px solid crimson;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Section About dan Pendidikan */
+#about, #pendidikan {
+    background-color: #0a0a0a;
+    padding: 100px 20px;
+}
+
+/* Box umum */
+.box {
+    max-width: 900px;
+    margin: auto;
+    background: #1c1c1c; /* Box warna hitam lebih terang */
+    color: #f0f0f0; /* Teks putih */
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 1.8;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    border-top: 5px solid crimson;
+}
+
 h1 {
     color: crimson;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #444; /* Garis bawah abu-abu gelap */
+    width: fit-content;
+    margin: 0 auto 30px auto;
 }
 
+.pbw-box {
+    background: #000;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 25px;
+    border-left: 6px solid crimson;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.pbw-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* Tabel pendidikan */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
     color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 th, td {
-    padding: 12px;
+    padding: 18px;
     text-align: center;
 }
 th {
-    background: linear-gradient(to right, crimson, black);
+    background: crimson;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
 }
-tr:nth-child(even) {
-    background: rgba(0,0,0,0.4);
+tr:nth-child(even) td {
+    background: #111; /* Hitam lebih gelap */
+}
+tr:hover td {
+    background: #333; /* Hover ke abu-abu gelap */
+    transition: 0.3s;
+}
+
+/* Popup nama */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9); /* Lebih gelap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.popup-content {
+    background: #222; /* Konten popup hitam */
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(220, 20, 60, 0.7);
+    border: 2px solid crimson;
+}
+.popup-content h2 {
+    color: crimson;
+    margin-top: 0;
+    font-size: 2rem;
+}
+.popup-content input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 2px solid #555;
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+    transition: border-color 0.3s;
+}
+.popup-content input:focus {
+    border-color: crimson;
+    outline: none;
+}
+.popup-content button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+}
+.popup-content button:hover {
+    background: darkred;
+    transform: translateY(-2px);
 }
