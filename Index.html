@@ -3,26 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-
+    <title>Website Profil</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
+    <div id="popup-nama" class="popup">
+        <div class="popup-content">
+            <h2>Selamat datang!</h2>
+            <p>Masukkan nama Anda untuk mempersonalisasi ucapan:</p>
+            <input type="text" id="input-nama" placeholder="Nama Anda">
+            <button id="submit-nama">Simpan</button>
+        </div>
+    </div>
+
     <div class="navbar">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="pendidikan.html">Riwayat Pendidikan</a>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#pendidikan">Riwayat Pendidikan</a>
     </div>
 
-    <div class="box">
-        <h1 class="title-home">HOME</h1>
-        <p>Selamat datang di website sederhana ini.</p>
-        <p>Halo, <span class="nama-user" id="ucapan"></span></p>
-        <p>Website ini berisi tentang profil diri, riwayat pendidikan, dan pembelajaran PBW.</p>
-    </div>
+    <section id="home">
+        <div class="home-container">
+            <div class="home-left">
+                <h1 class="home-title">Selamat Datang di Website Saya</h1>
+                <p class="home-subtitle">Halo! Website ini berisi profil diri, riwayat pendidikan, dan pembelajaran PBW.</p>
 
-    <script src="script.js"></script>
+                <div class="nama-box">
+                    <p id="ucapan" class="nama-text">[Nama Anda]</p>
+                </div>
+            </div>
+            <div class="home-right">
+                <div class="illustration">
+                    <img src="https://cdn.oneesports.id/cdn-data/sites/2/2023/05/Mikasa-4.jpg" alt="Profil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="box">
+            <h1>About Me</h1>
+            <p>
+                Saya adalah mahasiswa Sistem Informasi yang tertarik pada teknologi, desain, dan dunia digital.
+                Bagi saya, teknologi bukan hanya alat, tetapi jembatan untuk menciptakan solusi.
+            </p>
+            <div class="pbw-box">
+                <div class="pbw-title">Pemrograman Berbasis Web</div>
+                PBW membantu saya memahami bagaimana website dibangun, dari HTML, CSS, hingga logika program.
+            </div>
+        </div>
+    </section>
+
+    <section id="pendidikan">
+        <div class="box">
+            <h1>Riwayat Pendidikan</h1>
+            <table>
+                <tr>
+                    <th>Tingkat</th>
+                    <th>Nama Sekolah</th>
+                    <th>Tahun Lulus</th>
+                </tr>
+                <tr>
+                    <td>SD</td>
+                    <td>SD 122 Cijawura</td>
+                    <td>2018</td>
+                </tr>
+                <tr>
+                    <td>SMP</td>
+                    <td>SMP 48 Bandung</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>SMA</td>
+                    <td>SMA 25 Bandung</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>Perguruan Tinggi</td>
+                    <td>Universitas Widyatama</td>
+                    <td>Ongoing</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
 </body>
 </html>
