@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Saya</title>
+    <title>Home</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -13,86 +13,111 @@
             font-family: "Poppins", sans-serif;
             background: linear-gradient(180deg, crimson, #000);
             color: white;
+            animation: fadeIn 1.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; margin-top: 20px; }
+            to { opacity: 1; margin-top: 0; }
         }
 
         .navbar {
-            background: rgba(0,0,0,0.6);
-            padding: 20px;
+            background: rgba(0,0,0,0.65);
             text-align: center;
+            padding: 17px;
             backdrop-filter: blur(8px);
         }
-
         .navbar a {
             background: rgba(255,255,255,0.15);
-            padding: 10px 20px;
+            padding: 10px 22px;
             margin: 0 10px;
-            border-radius: 20px;
+            border-radius: 18px;
             color: white;
             text-decoration: none;
             font-size: 18px;
             transition: 0.3s;
+            font-weight: 500;
         }
-
         .navbar a:hover {
             background: crimson;
         }
 
-        .container {
-            background: rgba(255,255,255,0.9);
-            color: #333;
-            margin: 60px auto;
-            width: 80%;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        h1 {
-            font-weight: 600;
+        .title-home {
             display: inline-block;
-            padding-bottom: 3px;
-            border-bottom: 6px solid;
-            border-image: linear-gradient(to right, crimson, black) 1;
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(to right, crimson, black);
+            -webkit-background-clip: text;
+            color: transparent;
+            padding-bottom: 7px;
+            border-bottom: 4px solid crimson;
+            letter-spacing: 2px;
         }
 
-        .nama-box {
-            margin: 20px auto;
-            width: fit-content;
-            padding: 10px 20px;
-            border-radius: 8px;
+        .box {
+            background: rgba(255,255,255,0.15);
+            width: 70%;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.2);
             color: white;
-            background: linear-gradient(to right, crimson, black);
+            margin: 90px auto;
+            padding: 45px;
+            text-align: center;
+            border-radius: 18px;
             font-size: 22px;
-            font-weight: bold;
+            line-height: 1.8;
+            animation: slideBox 1.2s ease;
+        }
+        @keyframes slideBox {
+            from { opacity:0; transform: scale(0.95); }
+            to { opacity:1; transform: scale(1); }
+        }
+
+        /* Nama tampil bergaya */
+        .nama-user {
+            margin-top: 15px;
+            display: inline-block;
+            font-size: 26px;
+            font-weight: 700;
+            padding: 7px 15px;
+            border-radius: 10px;
+            background: linear-gradient(to right, crimson, black);
+            border: 2px solid crimson;
         }
     </style>
 
     <script>
-        alert("Halo, selamat datang di website saya!");
+        alert("Halo, selamat datang di Website saya!");
+
         var nama = prompt("Masukkan nama Anda:");
+
+        if(nama === "" || nama === null){
+            nama = "Pengunjung";
+        }
     </script>
 </head>
 <body>
-
+    
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="pendidikan.html">Riwayat Pendidikan</a>
     </div>
 
-    <div class="container">
-        <h1>Home</h1>
+    <div class="box">
+        <h1 class="title-home">HOME</h1>
+        <p>Selamat datang di website sederhana ini.</p>
 
-        <h2>Selamat Datang di Dunia Saya</h2>
+        <p>Halo, <span class="nama-user" id="ucapan"></span></p>
 
-        <div id="namaBlock"></div>
-
-        <script>
-            document.getElementById("namaBlock").innerHTML =
-                '<div class="nama-box">' + nama + '</div>';
-        </script>
-
+        <p>
+            Website ini berisi tentang profil diri, perjalanan pendidikan, 
+            serta pembelajaran Pemrograman Berbasis Web (PBW).
+        </p>
     </div>
+
+    <script>
+        document.getElementById("ucapan").innerHTML = nama;
+    </script>
 
 </body>
 </html>
