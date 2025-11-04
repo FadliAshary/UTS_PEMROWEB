@@ -1,27 +1,24 @@
-/* Reset dan font */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    /* Latar belakang default hitam */
     background-color: #0a0a0a;
 }
 
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10,10,10,0.8); /* Hitam sedikit transparan */
+    background: rgba(10,10,10,0.8);
     text-align: center;
     padding: 15px 0;
-    backdrop-filter: blur(10px); /* Efek blur yang lebih kuat */
+    backdrop-filter: blur(10px);
     z-index: 100;
-    border-bottom: 2px solid crimson; /* Garis pemisah crimson */
+    border-bottom: 2px solid crimson;
 }
 .navbar a {
-    color: #f0f0f0; /* Putih keabuan */
+    color: #f0f0f0;
     text-decoration: none;
     margin: 0 15px;
     padding: 10px 20px;
@@ -34,20 +31,18 @@ body, html {
     background: crimson;
     color: white;
     border-color: crimson;
-    box-shadow: 0 0 15px crimson; /* Efek glow crimson */
+    box-shadow: 0 0 15px crimson;
 }
 
-/* Section Umum */
+
 section {
-    padding-top: 60px; /* Jarak atas untuk mengatasi fixed navbar */
-    min-height: 100vh;
+    padding-top: 60px;
     display: flex;
     align-items: center;
 }
 
-/* Home Section */
 #home {
-    background: linear-gradient(180deg, #1a0000 0%, #000000 100%); /* Gradien gelap ke hitam */
+    background: linear-gradient(180deg, #1a0000 0%, #000000 100%);
 }
 
 .home-container {
@@ -88,14 +83,13 @@ section {
     color: #aaa;
 }
 
-/* Balok nama */
 .nama-box {
     background: #222;
     padding: 25px 35px;
     border-radius: 15px;
     border: 1px solid crimson;
     max-width: 400px;
-    box-shadow: 0 0 20px rgba(220, 20, 60, 0.4); /* Glow effect */
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
     transition: transform 0.4s, box-shadow 0.4s;
 }
 .nama-box:hover {
@@ -109,28 +103,25 @@ section {
     text-align: center;
 }
 
-/* Home illustration */
 .illustration img {
     border-radius: 50%;
-    box-shadow: 0 0 50px rgba(220, 20, 60, 0.7); /* Efek glow yang dramatis */
+    box-shadow: 0 0 50px rgba(220, 20, 60, 0.7);
     border: 5px solid crimson;
     width: 250px;
     height: 250px;
     object-fit: cover;
 }
 
-/* Section About dan Pendidikan */
 #about, #pendidikan {
     background-color: #0a0a0a;
     padding: 100px 20px;
 }
 
-/* Box umum */
 .box {
     max-width: 900px;
     margin: auto;
-    background: #1c1c1c; /* Box warna hitam lebih terang */
-    color: #f0f0f0; /* Teks putih */
+    background: #1c1c1c;
+    color: #f0f0f0;
     padding: 40px;
     border-radius: 15px;
     font-size: 18px;
@@ -145,7 +136,7 @@ h1 {
     font-weight: 700;
     text-align: center;
     padding-bottom: 8px;
-    border-bottom: 4px solid #444; /* Garis bawah abu-abu gelap */
+    border-bottom: 4px solid #444;
     width: fit-content;
     margin: 0 auto 30px auto;
 }
@@ -167,7 +158,6 @@ h1 {
     margin-bottom: 8px;
 }
 
-/* Tabel pendidikan */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -189,28 +179,27 @@ th {
     font-weight: 700;
 }
 tr:nth-child(even) td {
-    background: #111; /* Hitam lebih gelap */
+    background: #111;
 }
 tr:hover td {
-    background: #333; /* Hover ke abu-abu gelap */
+    background: #333;
     transition: 0.3s;
 }
 
-/* Popup nama */
 .popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9); /* Lebih gelap */
+    background: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 200;
 }
 .popup-content {
-    background: #222; /* Konten popup hitam */
+    background: #222;
     color: white;
     padding: 40px;
     border-radius: 15px;
